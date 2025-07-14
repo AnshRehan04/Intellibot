@@ -312,7 +312,7 @@ const Chat = () => {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 30000);
 
-            const response = await fetch('http://localhost:5000/api/chat', {
+            const response = await fetch('https://intellibot-rswr.onrender.com/api/chat', {
               method: 'POST',
               headers: { 
                 'Content-Type': 'application/json',
