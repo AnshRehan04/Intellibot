@@ -52,7 +52,7 @@ const Premium = () => {
       handler: async function () {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user && user.email) {
-          await fetch('http://localhost:5000/api/upgrade-to-premium', {
+          await fetch('https://intellibot-rswr.onrender.com/api/upgrade-to-premium', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: user.email })
