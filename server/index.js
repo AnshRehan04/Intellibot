@@ -418,4 +418,4 @@ app.post('/api/reset-password', async (req, res) => {
 // Add static file serving for the uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.listen(5000, () => console.log('Server running on port 5000'));
+app.listen(process.env.PORT, () => console.log('Server running on port 5000'));
