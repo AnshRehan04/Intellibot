@@ -246,7 +246,7 @@ const Chat = () => {
       try {
         const formData = new FormData();
         formData.append('image', pendingImage.file);
-        const response = await fetch('http://localhost:5000/api/upload', {
+        const response = await fetch('https://intellibot-rswr.onrender.com/api/upload', {
           method: 'POST',
           body: formData,
         });
