@@ -40,7 +40,7 @@ const upload = multer({
   }
 });
 
-mongoose.connect(`${process.env.MONGODB_URI}/ip-project`, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(`${process.env.MONGODB_URL}/ip-project`, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const userSchema = new mongoose.Schema({
   firstName: String,
