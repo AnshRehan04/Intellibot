@@ -134,7 +134,7 @@ app.post('/api/chat', async (req, res) => {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
-          'HTTP-Referer': 'http://localhost:5000',
+          'HTTP-Referer': 'https://intellibot-rswr.onrender.com',
           'X-Title': 'Chat App'
         },
         responseType: 'stream'
