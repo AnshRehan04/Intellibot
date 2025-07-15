@@ -23,6 +23,13 @@ app.options('*', cors({
   origin: ['https://intellibot-omega.vercel.app'],
   credentials: true,
 }));
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://intellibot-omega.vercel.app'); // Or '*' to allow any origin
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Specify allowed methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Specify allowed headers
+  next();
+});
 app.use(express.json());
 
 // Configure multer for image upload
