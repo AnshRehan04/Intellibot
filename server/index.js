@@ -134,7 +134,7 @@ app.post('/api/chat', async (req, res) => {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
-          'HTTP-Referer': 'http://localhost:5000',
+          'HTTP-Referer': 'https://intellibot-rswr.onrender.com/',
           'X-Title': 'Chat App'
         },
         responseType: 'stream'
@@ -333,7 +333,7 @@ app.post('/api/generate-image', async (req, res) => {
       fs.writeFileSync(filepath, imageBuffer);
       
       // Create a URL for the image
-      const imageUrl = `http://localhost:5000/uploads/${filename}`;
+      const imageUrl = `https://intellibot-rswr.onrender.com/uploads/${filename}`;
       
       // Send the response
       res.write(`data: ${JSON.stringify({
@@ -384,7 +384,7 @@ app.post('/api/forgot-password', async (req, res) => {
     user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
     await user.save();
     // Send email
-    const resetUrl = `http://localhost:5173/reset-password/${token}`;
+    const resetUrl = `https://intellibot-rswr.onrender.com/reset-password/${token}`;
     await transporter.sendMail({
       to: user.email,
       subject: 'Password Reset',
