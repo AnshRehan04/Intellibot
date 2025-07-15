@@ -13,7 +13,11 @@ const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: ['https://intellibot-omega.vercel.app'],
+  credentials: true, // if you use cookies or authentication headers
+}));
 app.use(express.json());
 
 // Configure multer for image upload
