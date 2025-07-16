@@ -324,7 +324,7 @@ app.post('/api/generate-image', async (req, res) => {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-          'Authorization': 'Bearer sk-djSt5R7iOQ608IQ66DfkmHMQIOF5bUw6OK7Ssowhh3ni90uw'
+          'Authorization': 'bearer sk-aEFPgBKkSlxxrYDF3dnlA7H5zasjrLBw2EAOKayfGiWxFpgs'
         }
       }
     );
